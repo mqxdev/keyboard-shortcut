@@ -1,0 +1,30 @@
+{
+  "name": "mqxdev/keyboard-shortcut",
+  "authors": [
+    "Aron Peyroteo Cardoso <aron@mqx.com.br>",
+    "Diogo Franco <diogo@diogofranco.com.br>"
+  ],
+  "description": "keyboard shortcut to jquery",
+  "moduleType": [],
+  "keywords": [
+    "keyboard",
+    "shortcut",
+    "jquery",
+    "key",
+    "keys",
+    "kshort"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "bower/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4"
+  }
+}
