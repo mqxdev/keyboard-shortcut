@@ -1,11 +1,14 @@
 {
-  "name": "mqxdev/keyboard-shortcut",
+  "name": "keyboard-shortcut",
   "authors": [
     "Aron Peyroteo Cardoso <aron@mqx.com.br>",
     "Diogo Franco <diogo@diogofranco.com.br>"
   ],
   "description": "keyboard shortcut to jquery",
-  "moduleType": [],
+  "moduleType": "globals",
+  "main": [
+    "keyboardShortcut.js"
+  ],
   "keywords": [
     "keyboard",
     "shortcut",
