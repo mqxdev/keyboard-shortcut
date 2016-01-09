@@ -3,8 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <title>Keyboard Shortcut</title>
+    <link rel="stylesheet" href="bower/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower/bootstrap/dist/css/bootstrap-theme.min.css">
+    <script src="bower/jquery/dist/jquery.min.js"></script>
+    <script src="bower/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="keyboardShortcut.js"></script>
+    <script>
+        $(document).ready(function(){
+            /*
+             Quando uma tecla e pressionada
+             */
+            $(document).keydown(function( e ){
+                // Alerta
+                keyboardShortcut(
+                        {
+                            selector: e,
+                            key: 'a'
+                        },function() {
+                            alert('Alerta do atalho')
+                        }
+                )
+                //  Help
+                keyboardShortcut(
+                        {
+                            selector: e,
+                            key: 'i',
+                            ctrl: true
+                        },function() {
+                            $('#myModal').modal('show');
+                        }
+                )
+            })
+
+        })
+    </script>
 </head>
 <body>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">keyboard-shortcut</a>
+        </div>
 
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <form class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+<div class="container">
+    <h1>Keyboard Shortcut</h1>
+    <div class="panel panel-success">
+        <div class="panel-heading">
+            <h3 class="panel-title">F2</h3>
+        </div>
+        <div class="panel-body">
+            Enable and Disable functio keyboard shortcut.
+        </div>
+    </div>
+    <div class="panel panel-success">
+        <div class="panel-heading">
+            <h3 class="panel-title">F4 - </h3>
+        </div>
+        <div class="panel-body">
+            Enable and Disable function debug.
+        </div>
+    </div>
+    <div class="panel panel-success">
+        <div class="panel-heading">
+            <h3 class="panel-title">Ctrl + i </h3>
+        </div>
+        <div class="panel-body">
+            Open modal for info.
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel" style="text-align:center;"><i class="glyphicon glyphicon-alert" style="color: #ff4f3d"></i> MODAL</h4>
+            </div>
+            <div class="modal-body" style="text-align:center;">
+                Modal chamado pelo comando Ctrl + i
+            </div>
+            <div class="modal-footer" >
+                <button type="button" class="btn btn-primary">Entendi</button>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
+
 </html>
